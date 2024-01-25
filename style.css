@@ -214,7 +214,7 @@ img.pfp  {
     border: 30px;
     border-radius: 150px;
     height: 45%;
-    margin-top: 20%;
+    margin-top: auto;
     width: 45%;
     overflow-x: hidden;
   }
