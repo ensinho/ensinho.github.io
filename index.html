@@ -15,10 +15,11 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
       <link rel="stylesheet" href="style.css"> 
   </head>
+  
     <body>
-        <header>
+       <header >
             <nav class="navbar navbar-dark fixed-top">
-             <nav class="navbar navbar-dark fixed-top">
+             
               <a href="#" class="logo" style="color: #fff;">Enzo Esmeraldo</a>
     <div class="container">
         <a class="navbar-brand" href="index.html">Bootstrap Hamburger Menu</a>
@@ -60,10 +61,10 @@
                     <a class="nav-link" href="#linguagens">Linguagens</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#experiencia">Experiencia</a>
+                    <a class="nav-link" href="experiencia.html">Experiencia</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#portifolio">Portfólio</a>
+                    <a class="nav-link" href="projetos.html">Portfólio</a>
                 </li>
             </ul>
         </div>
@@ -73,8 +74,8 @@
             <div class="dropdown">
               <a href="#geral" class="active">Sobre Mim</a>
               <a href="#linguagens" >Linguagens</a>
-              <a href="#experiencia">Experiência</a>
-              <a href="#portifolio">Projetos</a>
+              <a href="experiencia.html">Experiência</a>
+              <a href="projetos.html">Projetos</a>
               <a href="#contato">
               </div>
                 <div  class="cards" style="position: relative; left: 15%;">
@@ -107,27 +108,24 @@
         </span>
     </div>
 </nav>
-
-            
-          </nav>
         </header>
-
-        <section id="geral">
+        <section id="geral" >
             <img class="pfp" 
                 src="assets/icone.jpg"
-                alt="icone_perfil"
-            />
-            <div class="sobremim" > 
-              <span class="about"> Sobre Mim <br>  </span>
-                Olá, me chamo Enzo Esmeraldo, e estou procurando uma vaga para Dev. <br> <br>
+                alt="icone_perfil"/>
 
-                Atualmente estou cursando o 4 semestre de ciência da computação na Universidade Federal do Ceará, 
+            <!-- <div class="about"> Sobre Mim <br>  </div> -->
+            <div class="sobremim" > 
+              <div class="sobre">
+                Olá, me chamo Enzo Esmeraldo, e estou procurando uma vaga para Dev. <br>
+
+                Atualmente estou cursando o 5° semestre de ciência da computação na Universidade Federal do Ceará, 
                 e fiz esse site para mostrar um pouco sobre mim e minhas realizações no meio acadêmico e profissional.
                 <br> Tenho experiência com as linguagens: JavaScript,HTML,CSS e Python. <br>
-                Estou procurando uma vaga de estágio para ajudar a me desenvolver profissionalmente <br>
+                Estou procurando uma vaga de estágio para ajudar a me desenvolver profissionalmente 
                  e academicamente, contribuindo para meu crescimento e o da empresa!
               </div>
-              
+              </div>
 
         </section>
 
@@ -195,66 +193,9 @@
                 </div>
               </div>
         </section>
+
+
         
-
-        <section id="experiencia">
-            <div class="exp">
-                <div class="membro_pet" > Membro do grupo PET Computação </div>
-                > Sou da equipe de divulgação, a qual
-                criamos posts informativos e educativos do mundo atual da informática.
-                Utilizamos ferramentas como Illustrator e Figma, além de usar o Canva também! <br> 
-                > Faço parte da organização da Olimpíada
-                Cearense de Informática, onde desenvolvemos e
-                aplicamos provas com diferentes níveis de programação. <br>
-                > Participei também do Projeto Coding, onde ensinamos
-                programação básica e intermediária à jovens de
-                escolas públicas na própria Universidade. <br>
-                > Além de projetos desenvolvidos na faculdade, tais como Player de Músicas, Guarda-Roupas-Virtual e Sistema de passagens.
-            </div>
-        </section>
-        <section id="portifolio">
-                  <span class="projects"> Projetos </span>
-                  <!-- >Um <a href="https://github.com/ensinho/trabalho_fup-s1 " style="color: black;"> Guarda-Roupas-Virtual </a>, feito em Python  <br>
-                  > Um <a href="https://github.com/ensinho/MusicPlayer" style="color: black;"> MusicPLayer </a> completamente em  Java <br>
-                  > Um <a href="https://github.com/ensinho/Projeto_Final_s2" style="color: black;">Sistema de Passagens Áereas </a> feito em C <br> -->
-                  <div class="secao"> 
-                    <div class="card">
-                      <a  href="https://github.com/ensinho/trabalho_fup-s1 " > 
-                      <img src="assets/armario_icon.jpg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 
-                      20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></img>
-                      <div class="card__content">
-                        <p class="card__title">Guarda-Roupas-Virtual</p>
-                        <p class="card__description">Um Guarda-Roupas-Virtual desenvolvido em Python e CSV quepermite 
-                          armazenar peças e identificações! Além de poder criar estilos e montar novos looks.</p>
-                      </div>
-                    </a>
-                    </div>
-
-                    <div class="card2">
-                      <a href="https://github.com/ensinho/MusicPlayer" > 
-                      <img src="assets/musicplayer_icon.jpg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 
-                      20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></img>
-                      <div class="card2__content">
-                        <p class="card2__title">MusicPlayer</p>
-                        <p class="card2__description">Um MusicPlayer criado em Java, com JavaFX que pega as músicas do seu computador,
-                          permitindo adicionar novas e editá-las, além de poder criar playlists e os seus próprios estilos!  </p>
-                      </div>
-                    </a>
-                    </div>
-
-                    <div class="card3">
-                      <a  href="https://github.com/ensinho/Projeto_Final_s2" >  
-                      <img src="assets/passagens_icon.jpg" viewBox="0 0 24 24"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 
-                      20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></img>
-                      <div class="card3__content">
-                        <p class="card3__title">Sistema de Passagens</p>
-                        <p class="card3__description">Um Sistema de passagens áereas programado em C, que lhe permite comprar passagens, visualizar e editar essas,
-                          com o intuito de praticidade, bem parecido como um site. </p>
-                      </div>
-                    </a>
-                    </div>
-                  </div>
-        </section>
         <!--<section id="contato">
             <span class="contact" > Contato </span>
             <div class="comment"> > Aqui estão minhas redes 
