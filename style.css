@@ -68,9 +68,10 @@ nav a.active {
 
 /* icones social icons */
   .cards {
-    display:grid;
-    height: 20rem;
-    width: 23rem;
+    display:flex;
+    height: 5rem;
+    width: 100%;
+    justify-content: center;
   }
   
   .cards svg {
@@ -147,29 +148,39 @@ nav a.active {
   }
 
 section {
+  /* Basic dimensions and centering */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  --s: 60px;
-  --c1: #1D1D1D;
-  --c2: #17BEBB;
-  --_g: radial-gradient(
-    25% 25% at 25% 25%,
-    var(--c1) 99%,
-    rgba(0, 0, 0, 0) 101%
+  /* Dark mode colors and gradient */
+  background: #121212; /* Fallback for browsers that don't support gradients */
+  background: linear-gradient(
+    135deg,
+    #626161 25%,
+    #353434 25%,
+    #353434 50%,
+    #626161 50%,
+    #626161 75%,
+    #353434 75%,
+    #353434
   );
-  background: var(--_g) var(--s) var(--s) / calc(2 * var(--s))
-      calc(2 * var(--s)),
-    var(--_g) 0 0 / calc(2 * var(--s)) calc(2 * var(--s)),
-    radial-gradient(50% 50%, var(--c2) 98%, rgba(0, 0, 0, 0)) 0 0 / var(--s)
-      var(--s),
-    repeating-conic-gradient(var(--c2) 0 50%, var(--c1) 0 100%)
-      calc(0.5 * var(--s)) 0 / calc(2 * var(--s)) var(--s);
-    min-height: 101.5vh;
-    display: flex;
-    font-size: 50px;
-    color:#fff;
-    font-weight: 700;
+  background-size: 40px 40px;
+
+  /* Animation */
+  animation: move 4s linear infinite;
 }
 
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
 
 
 @media (max-width:979px) {
@@ -177,26 +188,34 @@ section {
     overflow: hidden;
     min-height: 100vh;
     min-width: 55vh;
+    /* Basic dimensions and centering */
+    width: 100%;
+    height: 100%;
     display: flex;
-    --s: 60px;
-    --c1: #1D1D1D;
-    --c2: #17BEBB;
-    --_g: radial-gradient(
-      25% 25% at 25% 25%,
-      var(--c1) 99%,
-      rgba(0, 0, 0, 0) 101%
+    justify-content: center;
+    align-items: center;
+
+    /* Dark mode colors and gradient */
+    background: #121212; /* Fallback for browsers that don't support gradients */
+    background: linear-gradient(
+      135deg,
+      #626161 25%,
+      #353434 25%,
+      #353434 50%,
+      #626161 50%,
+      #626161 75%,
+      #353434 75%,
+      #353434
     );
-    background: var(--_g) var(--s) var(--s) / calc(2 * var(--s))
-        calc(2 * var(--s)),
-      var(--_g) 0 0 / calc(2 * var(--s)) calc(2 * var(--s)),
-      radial-gradient(50% 50%, var(--c2) 98%, rgba(0, 0, 0, 0)) 0 0 / var(--s)
-        var(--s),
-      repeating-conic-gradient(var(--c2) 0 50%, var(--c1) 0 100%)
-        calc(0.5 * var(--s)) 0 / calc(2 * var(--s)) var(--s);
+    background-size: 40px 40px;
+
+    /* Animation */
+    animation: move 5s linear infinite;
     font-size: 50px;
     color:#fff;
     font-weight: 700;
 }
+
 
 
 }
@@ -243,14 +262,13 @@ span.nomeBaixo{
 }
 
 img.pfp  {
-    margin-top: 12%;
-    margin-left: 11.7%;
+   
     box-shadow: 7px 15px #17BEBB;
     border: 30px;
     border-radius: 150px;
-    height: 15%;
-    width: 18%;
-    z-index: 2;
+    height: 70%;
+    width: 25%;
+   
   }
 
   @media only screen and (max-width:979px){
@@ -281,21 +299,25 @@ img.pfp  {
     justify-content: center;
     align-items: center;
     display: flex;
-    padding: 9rem;
+    color: #ffff ;
+    padding:4rem;
+    text-align: start ;
+    font: 700 1.2rem 'Poppins', sans-serif;
+    
   }
 
   .sobre{
     text-align:center;
     background-color: #1D1D1D;
-    color: #ffff;
     width: 61rem;
     padding: 1.5rem;
-    padding-left: 5.5rem;
-    margin-left: -16rem;
+    padding-left: 4rem;
     font: 700 2rem 'Poppins', sans-serif;
     display: flex;
     border-radius: 4rem;
   }
+
+ 
 
   .about{
     align-items: center;
@@ -1190,4 +1212,108 @@ img.pfp  {
   width: 100%;
   height: 170px;
   background: #fff;
+}
+
+/* ///////////////////////// */
+
+.container {
+  display: flex;
+
+}
+
+.sidebar {
+  width: 30%;
+  padding: 1rem;
+  background-color: #1D1D1D;
+  border-radius: 2rem;
+  margin-right: 1.5rem;
+  text-align: center;
+  font: 700 1.25rem 'Poppins', sans-serif;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 17.2rem;
+  height: 17.8rem;
+  margin-bottom: 10px;
+  border: 0.2rem solid #fff;
+}
+
+.sidebar h1, .sidebar p {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+  height: 37.3rem;
+  background-color: #1D1D1D;
+  border-radius: 2rem;
+}
+
+.main-content h2{
+  font: 700 2.1rem 'Poppins', sans-serif;
+  padding: 0.5rem;
+}
+
+.main-content h3 {
+  text-align: start;
+  font: 700 2.1rem 'Poppins', sans-serif;
+  padding: 0.5rem;
+}
+
+.main-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.main-content ul li {
+  padding: 0.2rem;
+  font: 700 1.5rem 'Poppins', sans-serif;
+}
+
+.tools {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+}
+
+.tools i {
+  font-size: 3rem !important;
+  color: #c9d1d9 !important;
+}
+
+.languages {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.language {
+  margin: 5px 0;
+}
+
+.language-bar {
+  background-color: #58a6ff;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.stats {
+  margin-top: 10px;
+}
+
+.stats p {
+  margin: 5px 0;
 }
