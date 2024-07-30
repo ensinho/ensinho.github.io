@@ -55,7 +55,7 @@ nav a:hover {
     }
 }
 
-@media (max-width:500px) {
+@media (max-width:600px) {
   .navbar {
     width: 50% !important;
     justify-content: space-between;
@@ -195,7 +195,7 @@ section {
 }
 
 
-@media (max-width:500px) {
+@media (max-width:600px) {
   section {
     overflow: hidden !important;
     min-height: 90vh;
@@ -1020,7 +1020,7 @@ img.pfp  {
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
   .sobremim {
     justify-content: center;
