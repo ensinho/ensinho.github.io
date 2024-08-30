@@ -55,9 +55,9 @@ nav a:hover {
     }
 }
 
-@media (max-width:600px) {
+@media (max-width:500px) {
   .navbar {
-    width: 50% !important;
+    width: 100% !important;
     justify-content: space-between;
     display: flex !important;
   }
@@ -195,34 +195,33 @@ section {
 }
 
 
-@media (max-width:600px) {
-  section {
-    overflow: hidden !important;
-    min-height: 90vh;
-    min-width: 93vh;
+@media (max-width:500px) {
+    section {
     /* Basic dimensions and centering */
-    width: 100% !important;
-    height: 100%;
-    display: flex;
+    width: 100%;
+    height: 100vh;
+    display: grid !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
     justify-content: center;
     align-items: center;
 
     /* Dark mode colors and gradient */
     background: #121212; /* Fallback for browsers that don't support gradients */
     background: linear-gradient(
-      135deg,
-      #626161 25%,
-      #353434 25%,
-      #353434 50%,
-      #626161 50%,
-      #626161 75%,
-      #353434 75%,
-      #353434
+    135deg,
+    #7696BC 25%,
+    #5C7286 25%,
+    #5C7286 50%,
+    #7696BC 50%,
+    #7696BC 75%,
+    #5C7286 75%,
+    #5C7286
     );
-    background-size: 30px 30px;
+    background-size: 40px 40px;
 
     /* Animation */
-    animation: move 5s linear infinite;
+    animation: move 4s linear infinite;
     font-size: 20px;
     color:#fff;
     font-weight: 600;
@@ -289,7 +288,7 @@ img.pfp  {
   @media (max-width:900px){
 
     .sobremim {
-      color: #17BEBB;
+      color: #fff;
       position: relative;
       display: flex;
       margin-left: 3.5rem;
@@ -580,6 +579,17 @@ img.pfp  {
     gap: 4rem;
   }
 
+  @media (max-width:510px) {
+    .secao {
+      display: grid !important;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 5rem;
+      gap: 2.5rem;
+    }
+  
+  }
+
  /***** Top menu *****/
  .dropdown {
   top: 1rem;
@@ -628,8 +638,9 @@ img.pfp  {
   .navbar-dark .navbar-toggler {
     position: relative;
     bottom: 1rem;
-    right: 5rem;
+    right: 0rem;
   }
+
 }
 
 .navbar-dark .navbar-toggler:focus {
@@ -1020,20 +1031,22 @@ img.pfp  {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
+
 
   .sobremim {
     justify-content: center;
     align-items: center;
     display: block;
     color: #ffff !important;
-    padding:2rem;
+    padding:4rem;
     padding-top: 3rem;
-    text-align: start ; 
+    text-align: center ; 
   }
 
   .sidebar {
-    width: 40% !important;
+    width: 91% !important;
+    margin-top: 0vh;
     padding: 1rem !important;
     background-color: #1D1D1D;
     border-radius: 2rem;
@@ -1051,14 +1064,14 @@ img.pfp  {
   }
 
   .main-content {
-    width: 40% !important;
-    padding: 5rem;
-    height: 40rem !important;
+    width: 91% !important;
+    padding: 1rem 10rem 1rem 10rem !important;
+    height: 80vh !important;
     background-color: #1D1D1D;
     border-radius: 2rem;
   }
   .main-content h2{
-    font: 650 1rem 'Poppins', sans-serif !important;
+    font: 650 0.9rem 'Poppins', sans-serif !important;
     padding: 0.2rem;
   }
   /* Skills */
@@ -1070,16 +1083,26 @@ img.pfp  {
   
   .main-content ul {
     list-style-type:armenian;
-    padding: 0;
+    padding: 2rem;
   }
   
   /* itens do card */
   .main-content ul li {
     display: grid !important;
-    padding: 0.5rem;
+    padding: 0.1rem;
     font: 600 1rem 'Poppins', sans-serif !important;
   }
 
+  .icon-image {
+    width: 20rem !important; /* Ajuste o tamanho conforme necessário */
+    content: url("https://skillicons.dev/icons?i=angular,java,python,html,css,scss,typescript,js,cpp,git,github,vscode,replit,figma&perline=5"); /* Altere o número de ícones por linha para 4, por exemplo */
+}
+
+}
+
+/* Estilo padrão para telas maiores */
+.icon-image {
+  width: 50rem;
 }
 
 .sidebar {
@@ -1091,6 +1114,8 @@ img.pfp  {
   text-align: center;
   font: 600 1.1rem 'Poppins', sans-serif;
 }
+
+
 
 .profile-picture {
   border-radius: 50%;
