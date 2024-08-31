@@ -202,7 +202,7 @@ section {
     height: 100vh;
     display: grid !important;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y:visible;
     justify-content: center;
     align-items: center;
 
@@ -226,6 +226,7 @@ section {
     color:#fff;
     font-weight: 600;
 }
+
 
 }
 
@@ -287,12 +288,8 @@ img.pfp  {
 
   @media (max-width:900px){
 
-    .sobremim {
-      color: #fff;
-      position: relative;
-      display: flex;
-      margin-left: 3.5rem;
-      
+    .sobremim {    
+     margin-left: 3.5rem;        
     }
 
     .sobre{
@@ -304,6 +301,7 @@ img.pfp  {
       font: 700 1.1rem 'Poppins', sans-serif;
       display: flex;
       border-radius: 4rem;
+      
     }
   }
 
@@ -319,16 +317,21 @@ img.pfp  {
     font: 600 3rem 'Poppins', sans-serif;
   }
 
-  .portifolio{
+  .portifolio {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
   }
 
-  @media only screen and (max-width:979px) {
+  @media only screen and (max-width: 979px) {
     .portifolio {
-      display: grid;
-      overflow-x: scroll;
+      flex-direction: column;
+      align-items: center;
     }
   }
+
+
 
 /* Cards dos Projetos */
 
@@ -1039,18 +1042,22 @@ img.pfp  {
     align-items: center;
     display: block;
     color: #ffff !important;
-    padding:4rem;
-    padding-top: 3rem;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    padding: 5rem;
     text-align: center ; 
   }
 
   .sidebar {
-    width: 91% !important;
+    width: 100% !important;
+    height: 50vh !important;
     margin-top: 0vh;
     padding: 1rem !important;
+    padding-top: 0rem !important;
     background-color: #1D1D1D;
     border-radius: 2rem;
-    padding-top: 5rem !important;
+    padding-top: 3rem !important;
     text-align: center;
     font: 600 1rem 'Poppins', sans-serif !important;
   }
@@ -1064,9 +1071,9 @@ img.pfp  {
   }
 
   .main-content {
-    width: 91% !important;
+    width: 100% !important;
     padding: 1rem 10rem 1rem 10rem !important;
-    height: 80vh !important;
+    height: 85vh !important;
     background-color: #1D1D1D;
     border-radius: 2rem;
   }
