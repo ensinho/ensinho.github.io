@@ -35,7 +35,7 @@
     --line-height-small: 1.2;
 
     --black: #000;
-    --pink: #ff3258;
+    --pink: #607ee0;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
 
@@ -404,7 +404,7 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .header {
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
+    background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .6)), 
         url('./images/header.jpg');
     height: 100vh;
     background-size: cover;
@@ -488,8 +488,13 @@ body:not(.user-is-tabbing) a:focus {
     transform: scale(1.2);
 }
 
+.work__image {
+    border-radius: 4rem !important;
+}
+
 .work__image-box {
     margin-bottom: var(--gutter-normal);
+    
 }
 
 @media(min-width: 901px) {
