@@ -447,6 +447,7 @@ body:not(.user-is-tabbing) a:focus {
         url('./images/header-cropped.jpg');
         width: 100%; /* Garantindo que preencha a largura do contêiner */
         object-fit: contain; /* Pode ajustar para 'cover' se quiser cobrir o contêiner */
+        scroll-behavior: smooth !important;
     }
 }
 
