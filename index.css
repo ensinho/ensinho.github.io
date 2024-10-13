@@ -20,6 +20,7 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    
 }
 
 :root {
@@ -63,6 +64,7 @@ html {
 @media(max-width: 1000px) {
     html {
         font-size: 52%;
+        scroll-behavior:smooth ;
     }
 }
 
@@ -280,6 +282,7 @@ body:not(.user-is-tabbing) a:focus {
     height: 100%;
     z-index: -1;
     transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
+    transform: 0.75s ease;
 }
 
 .link__text:focus {
@@ -386,7 +389,7 @@ body:not(.user-is-tabbing) a:focus {
     display: inline-block;
     height: 1rem;
     background: var(--white);
-    transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
+    transition: all 0.25s smooth(1, 0.68, 0.16, 0.9);
 }
 
 .nav__link:hover {
@@ -429,12 +432,22 @@ body:not(.user-is-tabbing) a:focus {
 @media(max-width: 500px) {
     .header {
         text-align: center;
+        object-fit: cover; 
+
     }
 
     .header__text p {
         transform: scale(.8);
     }
 }
+
+@media (max-width: 600px) {
+    .header {
+        width: 100%; /* Garantindo que preencha a largura do contêiner */
+        object-fit: contain; /* Pode ajustar para 'cover' se quiser cobrir o contêiner */
+    }
+}
+
 
 /* --------------------------------------- */
 /* ----- Work ----- */
