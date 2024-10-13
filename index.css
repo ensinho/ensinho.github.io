@@ -443,6 +443,8 @@ body:not(.user-is-tabbing) a:focus {
 
 @media (max-width: 600px) {
     .header {
+        background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .6)), 
+        url('./images/header-cropped.jpg');
         width: 100%; /* Garantindo que preencha a largura do contêiner */
         object-fit: contain; /* Pode ajustar para 'cover' se quiser cobrir o contêiner */
     }
