@@ -41,3 +41,8 @@ window.addEventListener("scroll", () => {
     alterStyles(isBackToTopRendered);
   }
 });
+
+
+function openPDF() {
+  window.open('images/curriculo2024-enzo.pdf', '_blank');
+}
