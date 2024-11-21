@@ -656,3 +656,8 @@ body:not(.user-is-tabbing) a:focus {
     scrollbar-width: thin;
     scrollbar-color: #888 transparent; 
 }
+
+.about__paragraph {
+    margin-top: 0 !important;
+    margin-bottom: 2rem !important;
+}

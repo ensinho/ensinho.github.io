@@ -44,5 +44,5 @@ window.addEventListener("scroll", () => {
 
 
 function openPDF() {
-  window.open('images/curriculo2024-enzo.pdf', '_blank');
+  window.open('images/Curricul_Enzo_Esmeraldo.pdf', '_blank');
 }
