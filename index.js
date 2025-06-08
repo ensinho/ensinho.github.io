@@ -44,5 +44,5 @@ window.addEventListener("scroll", () => {
 
 
 function openPDF() {
-  window.open('images/CurricuoUpdated.pdf', '_blank');
+  window.open('images/CurriculoUpdated.pdf', '_blank');
 }
