@@ -303,6 +303,11 @@ body:not(.user-is-tabbing) a:focus {
     font-family: sans-serif;
 }
 
+.external-link-icon svg {
+    margin-left: 5px;
+    vertical-align: middle; 
+  }
+
 /* ----- Back to Top ----- */
 
 .back-to-top {
