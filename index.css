@@ -195,7 +195,7 @@ a {
     font-family: 'Jost', sans-serif;
     transition: all .2s;
     outline: 2px solid transparent;
-
+    cursor: pointer;
 }
 
 ::-moz-focus-inner {
@@ -253,6 +253,7 @@ body:not(.user-is-tabbing) a:focus {
 .btn--pink {
     background: var(--pink);
     transition: all 0.2s;
+    cursor: pointer;
 }
 
 .btn--pink::after {
