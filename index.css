@@ -195,6 +195,7 @@ a {
     font-family: 'Jost', sans-serif;
     transition: all .2s;
     outline: 2px solid transparent;
+
 }
 
 ::-moz-focus-inner {
@@ -223,6 +224,7 @@ body:not(.user-is-tabbing) a:focus {
     color: inherit;
     border: 1px solid  var(--pink);
     font-weight: 400;
+    cursor: pointer !important;
 }
 
 .btn:focus {
@@ -316,6 +318,7 @@ body:not(.user-is-tabbing) a:focus {
     z-index: 10;
     visibility: hidden;
     transition: all .4s;
+    cursor: pointer;
 }
 
 .back-to-top__image {
@@ -445,8 +448,8 @@ body:not(.user-is-tabbing) a:focus {
     .header {
         background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .6)), 
         url('./images/header-cropped.jpg');
-        width: 100%; /* Garantindo que preencha a largura do contêiner */
-        object-fit: contain; /* Pode ajustar para 'cover' se quiser cobrir o contêiner */
+        width: 100%; 
+        object-fit: contain; 
         scroll-behavior: smooth !important;
     }
 }
