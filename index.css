@@ -873,3 +873,51 @@ body:not(.user-is-tabbing) a:focus {
         opacity: 0;
     }
 }
+
+
+@media (max-width: 768px) {
+  @-webkit-keyframes fallingSakura1 {
+    0% {
+      -webkit-transform:
+        translate3d(0, 0, 0)
+        rotateX(0deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform:
+        translate3d(60vw, 900px, 0px) 
+        rotateX(-290deg);
+      opacity: 0.3;
+    }
+  }
+
+  @-webkit-keyframes fallingSakura2 {
+    0% {
+      -webkit-transform:
+        translate3d(0, 0, 0)
+        rotateX(-20deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform:
+        translate3d(30vw, 900px, 0px)
+        rotateX(-70deg);
+      opacity: 0.2;
+    }
+  }
+
+  @-webkit-keyframes fallingSakura3 {
+    0% {
+      -webkit-transform:
+        translate3d(0, 0, 0)
+        rotateX(90deg);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform:
+        translate3d(85vw, 900px, 0px)
+        rotateX(290deg);
+      opacity: 0;
+    }
+  }
+}
