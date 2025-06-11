@@ -885,7 +885,7 @@ body:not(.user-is-tabbing) a:focus {
     }
     100% {
       -webkit-transform:
-        translate3d(80px, 700px, 0px) 
+        translate3d(60px, 650px, 0px) 
         rotateX(-290deg);
       opacity: 0.3;
     }
@@ -900,7 +900,7 @@ body:not(.user-is-tabbing) a:focus {
     }
     100% {
       -webkit-transform:
-        translate3d(20px, 700px, 0px)
+        translate3d(15px, 650px, 0px)
         rotateX(-70deg);
       opacity: 0.2;
     }
@@ -915,7 +915,7 @@ body:not(.user-is-tabbing) a:focus {
     }
     100% {
       -webkit-transform:
-        translate3d(120px, 700px, 0px)
+        translate3d(100px, 650px, 0px)
         rotateX(290deg);
       opacity: 0;
     }
