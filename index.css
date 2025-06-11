@@ -419,16 +419,28 @@ body:not(.user-is-tabbing) a:focus {
     .nav {
         justify-content: center;
     }
+
+    .work-nav {
+        justify-content: center;
+    }
 }
 
 @media(max-width: 400px) {
     .nav__item:not(:last-child) {
         margin-right: var(--gutter-normal);
     }
+    
+    .work-nav__item:not(:last-child) {
+        margin-right: var(--gutter-normal);
+    }
 }
 
 @media(max-width: 300px) {
     .nav {
+        font-size: var(--font-size-small);
+    }
+
+    .work-nav {
         font-size: var(--font-size-small);
     }
 }
