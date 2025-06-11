@@ -366,10 +366,6 @@ body:not(.user-is-tabbing) a:focus {
     display: flex;
     justify-content: flex-end;
     padding: var(--gutter-normal) 0;
-    
-    @media(max-width: 600px) {
-        display: none;
-    }
 }
 
 .work-nav__items {
@@ -417,6 +413,16 @@ body:not(.user-is-tabbing) a:focus {
     justify-content: space-between;
     align-items: start;
 }
+
+ @media(max-width: 600px) {
+        .work-nav__items {
+            display: none !important;
+        }
+     
+        .work-nav {
+            display: none !important;
+        }        
+    }
 
 
 @media(max-width: 500px) {
