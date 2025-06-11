@@ -362,6 +362,59 @@ body:not(.user-is-tabbing) a:focus {
     margin-right: var(--gutter-medium);
 }
 
+.work-nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: var(--gutter-normal) 0;
+}
+
+.work-nav__items {
+    display: flex;
+    list-style: none;
+}
+
+.work-nav__item:not(:last-child) {
+    margin-right: var(--gutter-medium);
+}
+
+.work-nav__link {
+    position: relative;
+    display: inline-block;
+    padding: 1rem 0;
+    text-decoration: none;
+    color: inherit;
+    transition: all .2s;
+}
+
+.work-nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    display: inline-block;
+    height: 1rem;
+    background: var(--white);
+    transition: all 0.25s smooth(1, 0.68, 0.16, 0.9);
+}
+
+.work-nav__link:hover {
+    color: var(--pink);
+}
+
+.work-nav__link:hover::after {
+    right: 0;
+    height: 2px;
+    background: var(--pink);
+}
+
+.work__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+
 @media(max-width: 500px) {
     .nav {
         justify-content: center;
