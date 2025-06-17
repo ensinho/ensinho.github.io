@@ -46,3 +46,15 @@ window.addEventListener("scroll", () => {
 function openPDF() {
   window.open('images/CurriculoEnzoLast.pdf', '_blank');
 }
+
+ const scroller = document.querySelector('.scroller');
+    if (scroller) {
+        const scrollerInner = scroller.querySelector('.scroller__inner');
+        const scrollerContent = Array.from(scrollerInner.children);
+
+        scrollerContent.forEach(item => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute('aria-hidden', true);
+            scrollerInner.appendChild(duplicatedItem);
+        });
+    }
