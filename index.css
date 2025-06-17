@@ -565,14 +565,14 @@ body:not(.user-is-tabbing) a:focus {
 .tech-logo {
     height: 60px;
     width: auto;
-    filter: grayscale(60%);
+    filter: grayscale(30%);
     transition: all 0.3s ease;
     opacity: 0.9;
 }
 
 .tech-logo:hover {
     filter: grayscale(0%);
-    transform: scale(1.1);
+    transform: scale(1.15);
     opacity: 1;
     cursor: pointer;
 }
