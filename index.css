@@ -723,8 +723,16 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Contact ----- */
 /* --------------------------------------- */
 
+.contact__info {
+    max-width: var(--container-medium-width);
+}
+
+/* --------------------------------------- */
+/* ----- Footer ----- */
+/* --------------------------------------- */
+
 .footer__developer-info {
-    margin-top: var(--gutter-normal);
+    margin-top: 1.25rem ;
     color: var(--white-1);
     font-size: var(--font-size-small);
 }
@@ -748,17 +756,9 @@ body:not(.user-is-tabbing) a:focus {
     transform: translateY(-5px);
 }
 
-.contact__info {
-    max-width: var(--container-medium-width);
-}
-
-/* --------------------------------------- */
-/* ----- Footer ----- */
-/* --------------------------------------- */
-
 .footer {
     text-align: center;
-    padding: var(--gutter-medium) 0 var(--gutter-normal);
+    padding: var(--gutter-normal) 0 var(--gutter-normal);
 }
 
 .footer__social-links {
