@@ -723,6 +723,31 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Contact ----- */
 /* --------------------------------------- */
 
+.footer__developer-info {
+    margin-top: var(--gutter-normal);
+    color: var(--white-1);
+    font-size: var(--font-size-small);
+}
+
+.footer__developer-link {
+    color: var(--pink);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer__developer-link:hover {
+    text-decoration: underline;
+}
+
+.footer__social-image {
+    height: 4rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer__social-link-item a:hover .footer__social-image {
+    transform: translateY(-5px);
+}
+
 .contact__info {
     max-width: var(--container-medium-width);
 }
