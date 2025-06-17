@@ -565,7 +565,7 @@ body:not(.user-is-tabbing) a:focus {
 .tech-logo {
     height: 60px;
     width: auto;
-    filter: grayscale(80%);
+    filter: grayscale(60%);
     transition: all 0.3s ease;
     opacity: 0.9;
 }
