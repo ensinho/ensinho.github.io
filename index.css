@@ -840,22 +840,22 @@ body:not(.user-is-tabbing) a:focus {
             rotateX(-290deg);
         opacity: 0.3;
     }
+}
 
-    @media (max-width: 768px) {
-        0% {
-          -webkit-transform:
-            translate3d(0, 0, 0)
-            rotateX(90deg);
-          opacity: 1;
-        }
-        100% {
-          -webkit-transform:
-            translate3d(80px, 800px, 0px)
-            rotateX(290deg);
-          opacity: 0;
-        }
+@keyframes fallingSakura1 {
+    0% {
+        transform:
+            translate3d(0,0,0)
+            rotateX(0deg);
+        opacity: 1;
+    }  
+    
+    100% {
+        transform:
+            translate3d(400px,900px,0px)
+            rotateX(-290deg);
+        opacity: 0.3;
     }
-
 }
 
 @-webkit-keyframes fallingSakura2 {
@@ -863,30 +863,30 @@ body:not(.user-is-tabbing) a:focus {
         -webkit-transform:
             translate3d(0,0,0)
             rotateX(-20deg);
-    opacity: 1;
+        opacity: 1;
     }  
     
     100% {
         -webkit-transform:
             translate3d(200px,900px,0px)
             rotateX(-70deg);
-            opacity: 0.2;
+        opacity: 0.2;
     }
+}
 
-    @media (max-width: 768px) {
-    
-        0% {
-          -webkit-transform:
-            translate3d(0, 0, 0)
+@keyframes fallingSakura2 {
+    0% {
+        transform:
+            translate3d(0,0,0)
             rotateX(-20deg);
-          opacity: 1;
-        }
-        100% {
-          -webkit-transform:
-            translate3d(10px, 800px, 0px)
+        opacity: 1;
+    }  
+    
+    100% {
+        transform:
+            translate3d(200px,900px,0px)
             rotateX(-70deg);
-          opacity: 0.2;
-        }
+        opacity: 0.2;
     }
 }
 
@@ -895,7 +895,7 @@ body:not(.user-is-tabbing) a:focus {
         -webkit-transform:
             translate3d(0,0,0)
             rotateX(90deg);
-    opacity: 1;
+        opacity: 1;
     }
     
     100% {
@@ -904,21 +904,31 @@ body:not(.user-is-tabbing) a:focus {
             rotateX(290deg);
         opacity: 0;
     }
+}
 
-    @media (max-width: 768px) {
-       0% {
-          -webkit-transform:
-            translate3d(0, 0, 0)
-            rotateX(0deg);
-          opacity: 1;
-        }
-        100% {
-          -webkit-transform:
-            translate3d(40px, 800px, 0px) 
-            rotateX(-290deg);
-          opacity: 0.3;
-        }  
+@keyframes fallingSakura3 {
+    0% {
+        transform:
+            translate3d(0,0,0)
+            rotateX(90deg);
+        opacity: 1;
     }
+    
+    100% {
+        transform:
+            translate3d(500px,900px,0px)
+            rotateX(290deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive animation overrides for smaller screens */
+@media (max-width: 768px) {
+    .petal span {
+        /* You may need to add a class or selector to target the animated elements */
+        animation-name: fallingSakura1, fallingSakura2, fallingSakura3;
+    }
+    /* Override animation keyframes for smaller screens if needed using different classes or JS */
 }
 
 
