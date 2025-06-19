@@ -10,6 +10,7 @@ function Header() {
       <div className="row">
         <nav className="nav" role="navigation">
           <ul className="nav__items">
+            <li className="nav__item"><a href="#tech" className="nav__link">Technologies</a></li>
             <li className="nav__item"><a href="#work" className="nav__link">Projects</a></li>
             <li className="nav__item"><a href="#about" className="nav__link">About me</a></li>
             <li className="nav__item"><a href="#contact" className="nav__link">Contact</a></li>

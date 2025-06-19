@@ -6,21 +6,21 @@
     font-family: 'Hk Grotesk';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/HKGrotesk-Regular.woff') format('woff');
+    src: url('../public/fonts/HKGrotesk-Regular.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/Jost-Regular.ttf') format('woff');
+    src: url('../public/fonts/Jost-Regular.ttf') format('woff');
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
-    
+    scroll-behavior: smooth !important;
 }
 
 :root {
@@ -58,7 +58,7 @@
 html {
     font-size: 62.5%; /* (16/10)*100 = 62.5% => 1rem = 10px */
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
 
 @media(max-width: 1000px) {
@@ -144,7 +144,6 @@ h3 {
 
 h2 {
     font-size: var(--font-size-large);
-    margin-bottom: var(--gutter-medium);
 }
 
 h2::after {
@@ -362,19 +361,25 @@ body:not(.user-is-tabbing) a:focus {
     margin-right: var(--gutter-medium);
 }
 
-.work-nav {
+
+.work__header {
     display: flex;
-    justify-content: flex-end;
-    padding: var(--gutter-normal) 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.work-nav {
+    padding: 2rem 0;
 }
 
 .work-nav__items {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
-}
-
-.work-nav__item:not(:last-child) {
-    margin-right: var(--gutter-medium);
+    gap: var(--gutter-medium);
 }
 
 .work-nav__link {
@@ -382,8 +387,10 @@ body:not(.user-is-tabbing) a:focus {
     display: inline-block;
     padding: 1rem 0;
     text-decoration: none;
-    color: inherit;
+    color: var(--white-1);
     transition: all .2s;
+    cursor: pointer;
+    font-weight: 400;
 }
 
 .work-nav__link::after {
@@ -392,38 +399,99 @@ body:not(.user-is-tabbing) a:focus {
     bottom: 0;
     left: 0;
     right: 100%;
-    display: inline-block;
-    height: 1rem;
-    background: var(--white);
-    transition: all 0.25s smooth(1, 0.68, 0.16, 0.9);
+    display: block;
+    height: 2px;
+    background: var(--pink);
+    transition: all 0.35s ease;
+}
+
+.work-nav__link:hover::after {
+    right: 0;
+}
+
+.work-nav__link.active::after {
+    right: 0; 
 }
 
 .work-nav__link:hover {
     color: var(--pink);
 }
 
-.work-nav__link:hover::after {
-    right: 0;
-    height: 2px;
-    background: var(--pink);
+.work-nav__link.active {
+    color: var(--pink);
+    font-weight: bold;
 }
 
-.work__header {
+.work__carousel-wrapper {
+    position: relative;
+}
+
+.work__boxes {
+    overflow: hidden; 
+    position: relative;
+    min-height: 500px; 
+}
+
+.work__box {
     display: flex;
-    justify-content: space-between;
-    align-items: start;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transform: translateY(20px);
 }
 
- @media(max-width: 600px) {
-        .work-nav__items {
-            display: none !important;
-        }
-     
-        .work-nav {
-            display: none !important;
-        }        
-    }
+.work__box.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    position: relative; 
+}
 
+.carousel-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid var(--pink);
+    color: var(--white);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    font-size: 2rem;
+}
+
+.carousel-btn:hover {
+    background-color: var(--pink);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn--prev {
+    left: -10rem; 
+}
+
+.carousel-btn--next {
+    right: -7rem; 
+}
+
+@media(max-width: 1340px) {
+    .carousel-btn--prev { left: -2rem; }
+    .carousel-btn--next { right: -2rem; }
+}
+
+@media(max-width: 900px) {
+    .carousel-btn {
+        display: none;
+    }
+}
 
 @media(max-width: 500px) {
     .nav {

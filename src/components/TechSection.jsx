@@ -12,19 +12,17 @@ function TechSection() {
   }, []);
 
   useEffect(() => {
-    // A lógica de duplicação agora é puramente CSS, mas o hook poderia ser mantido se animações JS fossem necessárias
-    if (!scrollerRef.current) return;
-
-    const scroller = scrollerRef.current;
-    const scrollerInner = scroller.querySelector('.scroller__inner');
-    const scrollerContent = Array.from(scrollerInner.children);
-
-    scrollerContent.forEach(item => {
-      const duplicatedItem = item.cloneNode(true);
-      duplicatedItem.setAttribute('aria-hidden', true);
-      scrollerInner.appendChild(duplicatedItem);
-    });
-    
+    if (techs.length > 0 && scrollerRef.current) {
+      const scrollerInner = scrollerRef.current.querySelector('.scroller__inner');
+      if (scrollerInner.children.length === techs.length) {
+        const scrollerContent = Array.from(scrollerInner.children);
+        scrollerContent.forEach(item => {
+          const duplicatedItem = item.cloneNode(true);
+          duplicatedItem.setAttribute('aria-hidden', true);
+          scrollerInner.appendChild(duplicatedItem);
+        });
+      }
+    }
   }, [techs]);
 
   return (
