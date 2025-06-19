@@ -671,16 +671,6 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-.work__box:not(:last-child) {
-    margin-bottom: 5rem;
-}
-
-@media(max-width: 500px) {
-    .work__box:not(:last-child) {
-        margin-bottom: 2rem;
-    }
-}
-
 .work__links {
     display: flex;
     align-items: center;
