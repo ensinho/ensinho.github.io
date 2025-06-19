@@ -480,7 +480,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .header {
     background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .6)), 
-        url('./images/header.jpg');
+        url('../public/images/header.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -517,7 +517,7 @@ body:not(.user-is-tabbing) a:focus {
 @media (max-width: 600px) {
     .header {
         background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .6)), 
-        url('./images/header-cropped.jpg');
+        url('../public/images/header-cropped.jpg');
         width: 100%; 
         object-fit: contain; 
         scroll-behavior: smooth !important;
@@ -1010,12 +1010,9 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-/* Responsive animation overrides for smaller screens */
 @media (max-width: 768px) {
     .petal span {
-        /* You may need to add a class or selector to target the animated elements */
         animation-name: fallingSakura1, fallingSakura2, fallingSakura3;
     }
-    /* Override animation keyframes for smaller screens if needed using different classes or JS */
 }
 
