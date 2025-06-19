@@ -452,7 +452,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .carousel-btn {
     position: absolute;
-    top: 40%;
+    top: 44%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid var(--pink);
@@ -687,7 +687,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__text {
-    flex: 0 0 30%;
+    flex: 0 0 32%;
 }
 
 .work__list {
