@@ -1,0 +1,56 @@
+[
+  {
+    "id": "project-1",
+    "title": "Unifor mobile Gym App",
+    "description": "A mobile application designed for the University of Fortaleza gym, allowing users to book classes, view schedules, and manage their gym activities, as the workers from the gym can manage students and the current state of the gym.",
+    "tech": ["Kotlin", "Android Studio"],
+    "githubUrl": "https://github.com/ensinho/devMobile-gym/tree/database",
+    "liveUrl": "https://github.com/ensinho/devMobile-gym/tree/database",
+    "imageUrl": "/images/uniforGym.png"
+  },
+  {
+    "id": "project-2",
+    "title": "Pokémon Team Builder",
+    "description": "A complete web application developed to create, save, and strategically analyze Pokémon teams. The project uses the PokéAPI to access data and implements advanced features, such as real-time analysis of team weaknesses and strengths, and Pokémon suggestions to optimize type coverage. User teams are saved and managed through Firebase.",
+    "tech": ["React", "HTML/CSS", "Tailwind", "Firebase"],
+    "githubUrl": "https://github.com/ensinho/pokemonTeamBuilder",
+    "liveUrl": "https://ensinho.github.io/pokemonTeamBuilder/",
+    "imageUrl": "/images/gengCover.png"
+  },
+  {
+    "id": "project-3",
+    "title": "AquaCensus - Virtual Catalog",
+    "description": "An online system for cataloging and research, specifically designed for laboratories. It allows users to record new specimen collections, view and manage catalogs, and track researchers involved in each project. The system is intended to streamline laboratory workflows, making it easy to organize and retrieve information efficiently.",
+    "tech": ["HTML", "SCSS", "JavaScript", "SQL", "Tailwind"],
+    "githubUrl": "https://github.com/ensinho/aquaCensus",
+    "liveUrl": "https://ensinho.github.io/aquaCensus/",
+    "imageUrl": "/images/virtualCatalgCover3.png"
+  },
+  {
+    "id": "project-4",
+    "title": "Airline Ticket System",
+    "description": "A flight management system that enables users to book flights, select and change seats, cancel reservations, and access other related features. It provides a detailed view of each flight, with options to manage and update flight information and passenger details.",
+    "tech": ["C", "Tailwind"],
+    "githubUrl": "https://github.com/ensinho/airlineTickets",
+    "liveUrl": "https://ensinho.github.io/airlineTickets/",
+    "imageUrl": "/images/airlineCover.png"
+  },
+  {
+    "id": "project-5",
+    "title": "Music Player",
+    "description": "A Music Player developed in Java and JavaFX. It allows users to add new songs, create custom genres and playlists, and manage their music library efficiently. The player is designed to offer a personalized music experience, providing flexibility.",
+    "tech": ["Java", "JavaFX", "CSS"],
+    "githubUrl": "https://github.com/ensinho/MusicPlayer",
+    "liveUrl": "https://github.com/ensinho/MusicPlayer",
+    "imageUrl": "/images/musicPlayerCover.png"
+  },
+  {
+    "id": "project-6",
+    "title": "Virtual Wardrobe",
+    "description": "A virtual wardrobe system that allows users to select the size and style of clothing items, and choose whether an item should be sold, donated, or kept. The system also has options for editing and updating these details, making it easy to organize and manage clothing inventories.",
+    "tech": ["Python", "CSV", "Tailwind"],
+    "githubUrl": "https://github.com/ensinho/virtualWardrobe",
+    "liveUrl": "https://ensinho.github.io/virtualWardrobe/",
+    "imageUrl": "/images/wardrobeCover2.png"
+  }
+]
