@@ -76,6 +76,7 @@ body {
     line-height: var(--line-height-normal);
     background: var(--black);
     overflow-x: hidden;
+    scroll-behavior: smooth !important;
 }
 
 .row {
@@ -452,7 +453,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .carousel-btn {
     position: absolute;
-    top: 44%;
+    top: 48%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.4);
     border: 2px solid var(--pink);
@@ -681,7 +682,6 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .work__list {
-    /* list-style-type: square; */
     list-style-position: inside;
     margin-bottom: var(--gutter-normal);
 }
