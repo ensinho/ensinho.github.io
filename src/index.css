@@ -493,6 +493,10 @@ body:not(.user-is-tabbing) a:focus {
     flex-wrap: wrap;
     list-style: none;
     gap: var(--gutter-medium);
+
+    @media (max-width: 600px) {
+        gap: 2rem;
+    }
 }
 
 .work-nav__link {
@@ -561,6 +565,48 @@ body:not(.user-is-tabbing) a:focus {
     visibility: visible;
     transform: translateY(0);
     position: relative; 
+}
+
+/* Mobile-only chevron hint buttons */
+.mobile-chevron {
+    display: none;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.4;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-chevron--left {
+    left: 10px;
+}
+
+.mobile-chevron--right {
+    right: 10px;
+}
+
+.mobile-chevron:hover {
+    opacity: 0.7;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-50%) scale(1.05);
+}
+
+/* Show mobile chevrons only on mobile */
+@media (max-width: 900px) {
+    .mobile-chevron {
+        display: flex;
+    }
 }
 
 .carousel-btn {
@@ -660,8 +706,8 @@ body:not(.user-is-tabbing) a:focus {
     }
     
     .nav__link {
-        font-size: 1.2rem;
-        padding: 0.4rem 0.8rem;
+        font-size: 2.3rem;
+        padding: 1rem 0.65rem !important;
     }
 }
 
@@ -727,7 +773,7 @@ body:not(.user-is-tabbing) a:focus {
 @media(max-width: 500px) {
     .header {
         text-align: center;
-        object-fit: cover; 
+        object-fit: cover;  
 
     }
 
@@ -740,6 +786,7 @@ body:not(.user-is-tabbing) a:focus {
     .header {
         background: linear-gradient(rgba(0,0,0, .2), rgba(0,0,0, .6)), 
         url('../public/images/header-cropped.jpg');
+        image-rendering: optimizeQuality;
         width: 100%; 
         object-fit: contain; 
         scroll-behavior: smooth !important;
@@ -1152,6 +1199,11 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 @media(max-width: 600px) {
+
+    .search-container {
+        display: none;
+    }   
+
     .contact-methods {
         gap: 1rem;
     }
@@ -2013,8 +2065,8 @@ body:not(.user-is-tabbing) a:focus {
 
 @media(max-width: 768px) {
     .skills-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem; 
     }
     
     .skill-card {
@@ -2033,6 +2085,81 @@ body:not(.user-is-tabbing) a:focus {
     .summary-stats {
         flex-direction: column;
         gap: 1.5rem;
+    }
+}
+
+/* Load More Button for Mobile Skills */
+.load-more-container {
+    text-align: center;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.load-more-btn,
+.show-less-btn {
+    background: transparent;
+    border: 2px solid var(--pink);
+    color: var(--white);
+    font-family: var(--font-stack);
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.load-more-btn:hover,
+.show-less-btn:hover {
+    background: var(--pink);
+    color: var(--black);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(96, 126, 224, 0.3);
+}
+
+.show-less-btn {
+    border-color: rgba(255, 193, 7, 0.8);
+    color: rgba(255, 193, 7, 0.9);
+}
+
+.show-less-btn:hover {
+    background: rgba(255, 193, 7, 0.8);
+    border-color: rgba(255, 193, 7, 0.8);
+    color: var(--black);
+}
+
+.load-more-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.show-less-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.load-more-btn:hover svg {
+    transform: translateY(2px);
+}
+
+.show-less-btn:hover svg {
+    transform: translateY(-2px);
+}
+
+.skills-count {
+    font-size: 1.2rem;
+    color: var(--white-1);
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Hide load more on desktop */
+@media(min-width: 769px) {
+    .load-more-container {
+        display: none;
     }
 }
 
@@ -2323,7 +2450,6 @@ body:not(.user-is-tabbing) a:focus {
     }
     
     .timeline-header {
-        flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
     }

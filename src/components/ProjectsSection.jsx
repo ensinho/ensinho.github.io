@@ -19,7 +19,9 @@ function ProjectsSection() {
 
   const getAllTechnologies = () => {
     const allTechs = projects.flatMap(project => project.tech);
-    return [...new Set(allTechs)];
+    const uniqueTechs = [...new Set(allTechs)];
+    // Exclude Android Studio from filter options
+    return uniqueTechs.filter(tech => tech !== 'Android Studio');
   };
 
   useEffect(() => {
@@ -136,6 +138,22 @@ function ProjectsSection() {
             </nav>
             
             <div className="work__carousel-wrapper">
+              {/* Mobile-only chevron hints */}
+              {filteredProjects.length > 1 && (
+                <>
+                  <button className="mobile-chevron mobile-chevron--left" onClick={handlePrev} aria-label="Previous project">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                  </button>
+                  <button className="mobile-chevron mobile-chevron--right" onClick={handleNext} aria-label="Next project">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                  </button>
+                </>
+              )}
+              
               {filteredProjects.length > 1 && (
                 <button className="carousel-btn carousel-btn--prev" onClick={handlePrev} aria-label="Previous project">
                   <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  

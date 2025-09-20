@@ -12,9 +12,9 @@ function About() {
         <div className="about__content">
           <div className="about__text">
             <p className="about__paragraph">
-              • I'm currently in the 6th semester of my Computer Science degree, with a growing interest in web design and development. <br />
-              • Right now, I'm focusing on improving my skills in TypeScript, Angular, and Python.<br />
-              • I created this website to share a bit about myself, along with my academic and professional achievements.<br />
+              • I'm currently finishing pursuing my Computer Science degree, with a growing interest in web design and development. <br />
+              • Right now, I'm mastering fullstack web development, focusing in TypeScript, Angular with Spring Boot.<br />
+              • I created this page to share a bit about myself and projects, along with my academic and professional achievements.<br />
               • Also, I'm a big fan of sharks and Pokémon 🦈
             </p>
             <a href="#" onClick={openPDF} className="btn">My resume</a>

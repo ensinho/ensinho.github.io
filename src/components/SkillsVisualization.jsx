@@ -3,6 +3,20 @@ import React, { useState, useEffect } from 'react';
 function SkillsVisualization() {
   const [skills, setSkills] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [visibleSkillsCount, setVisibleSkillsCount] = useState(6); // Initial number of skills to show on mobile
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
 
 const skillsData = [
     // Frontend
@@ -32,7 +46,7 @@ const skillsData = [
 ];
 
   const categories = [
-    { key: 'all', label: 'All Skills' },
+    { key: 'all', label: 'All' },
     { key: 'frontend', label: 'Frontend' },
     { key: 'backend', label: 'Backend' },
     { key: 'language', label: 'Languages' },
@@ -47,6 +61,27 @@ const skillsData = [
   const filteredSkills = selectedCategory === 'all' 
     ? skills 
     : skills.filter(skill => skill.category === selectedCategory);
+
+  // Get skills to display based on mobile state and visible count
+  const skillsToDisplay = isMobile 
+    ? filteredSkills.slice(0, visibleSkillsCount)
+    : filteredSkills;
+
+  const hasMoreSkills = isMobile && visibleSkillsCount < filteredSkills.length;
+  const canShowLess = isMobile && visibleSkillsCount > 6;
+
+  const loadMoreSkills = () => {
+    setVisibleSkillsCount(prev => prev + 6);
+  };
+
+  const showLessSkills = () => {
+    setVisibleSkillsCount(6);
+  };
+
+  // Reset visible count when category changes
+  useEffect(() => {
+    setVisibleSkillsCount(6);
+  }, [selectedCategory]);
 
   const getSkillColor = (level) => {
     if (level >= 85) return '#28a745';
@@ -76,7 +111,7 @@ const skillsData = [
 
         {/* Skills Grid */}
         <div className="skills-grid">
-          {filteredSkills.map((skill, index) => (
+          {skillsToDisplay.map((skill, index) => (
             <div key={skill.name} className="skill-card" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="skill-header">
                 <img src={skill.iconUrl} alt={skill.name} className="skill-icon" />
@@ -102,6 +137,33 @@ const skillsData = [
             </div>
           ))}
         </div>
+
+        {/* Load More/Less Buttons (Mobile Only) */}
+        {(hasMoreSkills || canShowLess) && (
+          <div className="load-more-container">
+            {hasMoreSkills && (
+              <button className="load-more-btn" onClick={loadMoreSkills}>
+                <span>Load More Skills</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <polyline points="6,9 12,15 18,9"></polyline>
+                </svg>
+              </button>
+            )}
+            
+            {canShowLess && (
+              <button className="show-less-btn" onClick={showLessSkills}>
+                <span>Show Less</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <polyline points="18,15 12,9 6,15"></polyline>
+                </svg>
+              </button>
+            )}
+            
+            <p className="skills-count">
+              Showing {skillsToDisplay.length} of {filteredSkills.length} skills
+            </p>
+          </div>
+        )}
 
         {/* Skills Summary */}
          {/*<div className="skills-summary">
