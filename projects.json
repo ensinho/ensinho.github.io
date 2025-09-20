@@ -21,7 +21,7 @@
     "id": "project-3",
     "title": "AquaCensus - Virtual Catalog",
     "description": "An online system for cataloging and research, specifically designed for laboratories. It allows users to record new specimen collections, view and manage catalogs, and track researchers involved in each project. The system is intended to streamline laboratory workflows, making it easy to organize and retrieve information efficiently.",
-    "tech": ["HTML", "SCSS", "JavaScript", "SQL", "Tailwind"],
+    "tech": [ "HTML/CSS", "JavaScript", "SQL", "Tailwind"],
     "githubUrl": "https://github.com/ensinho/aquaCensus",
     "liveUrl": "https://ensinho.github.io/aquaCensus/",
     "imageUrl": "/images/virtualCatalgCover3.png"
@@ -30,7 +30,7 @@
     "id": "project-4",
     "title": "Airline Ticket System",
     "description": "A flight management system that enables users to book flights, select and change seats, cancel reservations, and access other related features. It provides a detailed view of each flight, with options to manage and update flight information and passenger details.",
-    "tech": ["C", "Tailwind"],
+    "tech": [ "HTML/CSS", "C", "Tailwind"],
     "githubUrl": "https://github.com/ensinho/airlineTickets",
     "liveUrl": "https://ensinho.github.io/airlineTickets/",
     "imageUrl": "/images/airlineCover.png"
@@ -48,7 +48,7 @@
     "id": "project-6",
     "title": "Virtual Wardrobe",
     "description": "A virtual wardrobe system that allows users to select the size and style of clothing items, and choose whether an item should be sold, donated, or kept. The system also has options for editing and updating these details, making it easy to organize and manage clothing inventories.",
-    "tech": ["Python", "CSV", "Tailwind"],
+    "tech": [ "HTML/CSS", "Python", "CSV", "Tailwind"],
     "githubUrl": "https://github.com/ensinho/virtualWardrobe",
     "liveUrl": "https://ensinho.github.io/virtualWardrobe/",
     "imageUrl": "/images/wardrobeCover2.png"
