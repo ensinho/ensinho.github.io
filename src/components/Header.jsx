@@ -2,7 +2,7 @@ import React from 'react';
 
 function Header() {
   const openPDF = () => {
-    window.open('/images/EnzoEsmeraldoCV_EN.pdf', '_blank');
+    window.open('/images/EnzoEsmeraldoEN.pdf', '_blank');
   };
 
   return (
