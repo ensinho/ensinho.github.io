@@ -19,30 +19,22 @@ function SkillsVisualization() {
   }, []);
 
 const skillsData = [
-    // Frontend
-    { name: "HTML5", level: 95, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", description: "Semantic HTML and web advanced standards" },
-    { name: "CSS3/SCSS", level: 95, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", description: "Advanced styling and responsive design" },
-    { name: "Tailwind CSS", level: 95, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", description: "Utility-first CSS framework for rapid UI development" },
-    { name: "Angular", level: 90, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg", description: "Expert in Angular framework, TypeScript, and component architecture" },
-    { name: "React", level: 80, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", description: "Modern React development with hooks and state management" },
-
-    // Backend
-    { name: "Spring Boot", level: 75, category: "backend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", description: "Backend development with Spring Boot and microservices" },
-    { name: "Node.js", level: 70, category: "backend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", description: "Server-side JavaScript development" },
-
-    // Database
-    { name: "SQL", level: 80, category: "database", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", description: "Database design and query optimization" },
-    { name: "Firebase", level: 70, category: "database", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg", description: "Realtime database, authentication, and cloud functions with Firebase" },
-
-    // Tools
-    { name: "Git", level: 85, category: "tools", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", description: "Version control and collaborative development" },
-
-    // Languages
-    { name: "TypeScript", level: 90, category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", description: "Advanced TypeScript development with type safety" },
-    { name: "Java", level: 80, category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", description: "Object-oriented programming and enterprise applications" },
-    { name: "JavaScript", level: 85 , category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", description: "ES6+ JavaScript and modern development practices" },
-    { name: "Python", level: 70, category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", description: "Python development for automation and data processing" },
-    { name: "C++", level: 65, category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", description: "C++ programming for systems and performance-critical applications" }
+  // Frontend
+  { name: "HTML5", level: 95, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", description: "Semantic HTML and web advanced standards" },
+  { name: "CSS3/SCSS", level: 95, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", description: "Advanced styling and responsive design" },
+  { name: "Tailwind CSS", level: 95, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", description: "Utility-first CSS framework for rapid UI development" },
+  { name: "TypeScript", level: 90, category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", description: "Advanced TypeScript development with type safety" },
+  { name: "Angular", level: 90, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg", description: "Expert in Angular framework, TypeScript, and component architecture" },
+  { name: "React", level: 85, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", description: "Modern React development with hooks and state management" },
+  { name: "Git", level: 85, category: "tools", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", description: "Version control and collaborative development" },
+  { name: "JavaScript", level: 80 , category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", description: "ES6+ JavaScript and modern development practices" },
+  { name: "Java", level: 80, category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", description: "Object-oriented programming and enterprise applications" },
+  { name: "Spring Boot", level: 75, category: "backend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", description: "Backend development with Spring Boot and microservices" },
+  { name: "SQL", level: 75, category: "database", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", description: "Database design and query optimization" },
+  { name: "Firebase", level: 70, category: "database", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg", description: "Realtime database, authentication, and cloud functions with Firebase" },
+  { name: "Node.js", level: 70, category: "backend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", description: "Server-side JavaScript development" },
+  { name: "Python", level: 70, category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", description: "Python development for automation and data processing" },
+  { name: "C++", level: 65, category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", description: "C++ programming for systems and performance-critical applications" }
 ];
 
   const categories = [

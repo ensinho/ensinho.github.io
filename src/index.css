@@ -2173,7 +2173,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .timeline-container {
     position: relative;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 3rem auto;
 }
 
