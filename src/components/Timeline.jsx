@@ -21,7 +21,7 @@ function Timeline() {
         "Integrated webhooks and deployed cloud-based solutions (Source Cloud) for continuous system deployment and maintenance",
         "Worked under Agile Scrum methodology, actively participating in planning, reviews, and retrospectives"
       ],
-      technologies: ["Angular", "TypeScript", "Spring Boot", "AI Services", "Cloud Deployment", "Scrum"]
+      technologies: ["Angular", "TypeScript", "Java", "Spring Boot", "AI Services", "Cloud Deployment", "Scrum"]
     },
     {
       id: 2,
@@ -38,7 +38,7 @@ function Timeline() {
         "Gained hands-on experience with full-stack development in a professional environment",
         "Learned Agile development methodologies and team collaboration practices"
       ],
-      technologies: ["Angular", "TypeScript", "CSS", "Spring Boot", "UI/UX Design"]
+      technologies: ["Angular", "TypeScript", "CSS", "Spring Boot", "UI/UX Design", "Figma"]
     }
   ];
 

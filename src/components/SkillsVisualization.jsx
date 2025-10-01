@@ -19,22 +19,22 @@ function SkillsVisualization() {
   }, []);
 
 const skillsData = [
-  // Frontend
-  { name: "HTML5", level: 95, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", description: "Semantic HTML and web advanced standards" },
-  { name: "CSS3/SCSS", level: 95, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", description: "Advanced styling and responsive design" },
-  { name: "Tailwind CSS", level: 95, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", description: "Utility-first CSS framework for rapid UI development" },
-  { name: "TypeScript", level: 90, category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", description: "Advanced TypeScript development with type safety" },
-  { name: "Angular", level: 90, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg", description: "Expert in Angular framework, TypeScript, and component architecture" },
-  { name: "React", level: 85, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", description: "Modern React development with hooks and state management" },
-  { name: "Git", level: 85, category: "tools", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", description: "Version control and collaborative development" },
+  { name: "Angular", level: 85, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg", description: "Expert in Angular framework, TypeScript, and component architecture" },
+  { name: "TypeScript", level: 80, category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", description: "Advanced TypeScript development with type safety" },
+  { name: "React", level: 80, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", description: "Modern React development with hooks and state management" },
   { name: "JavaScript", level: 80 , category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", description: "ES6+ JavaScript and modern development practices" },
-  { name: "Java", level: 80, category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", description: "Object-oriented programming and enterprise applications" },
-  { name: "Spring Boot", level: 75, category: "backend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", description: "Backend development with Spring Boot and microservices" },
+  { name: "HTML5", level: 90, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", description: "Semantic HTML and web advanced standards" },
+  { name: "CSS3/SCSS", level: 80, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", description: "Advanced styling and responsive design" },
+  { name: "Tailwind CSS", level: 80, category: "frontend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", description: "Utility-first CSS framework for rapid UI development" },
+  { name: "Git", level: 80, category: "tools", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", description: "Version control and collaborative development" },
+  { name: "Insomnia", level: 70, category: "tools", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/insomnia/insomnia-original.svg", description: "API design, testing, and debugging with Insomnia" },
+  { name: "Figma", level: 70, category: "tools", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg", description: "UI/UX design and prototyping with Figma" },
+  { name: "Java", level: 75, category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", description: "Object-oriented programming and enterprise applications" },
+  { name: "Spring Boot", level: 70, category: "backend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", description: "Backend development with Spring Boot and microservices" },
   { name: "SQL", level: 75, category: "database", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", description: "Database design and query optimization" },
   { name: "Firebase", level: 70, category: "database", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg", description: "Realtime database, authentication, and cloud functions with Firebase" },
   { name: "Node.js", level: 70, category: "backend", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", description: "Server-side JavaScript development" },
-  { name: "Python", level: 70, category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", description: "Python development for automation and data processing" },
-  { name: "C++", level: 65, category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", description: "C++ programming for systems and performance-critical applications" }
+  { name: "Python", level: 65, category: "language", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", description: "Python development for automation and data processing" },
 ];
 
   const categories = [
@@ -76,7 +76,7 @@ const skillsData = [
   }, [selectedCategory]);
 
   const getSkillColor = (level) => {
-    if (level >= 85) return '#28a745';
+    if (level >= 80) return '#28a745';
     if (level >= 70) return '#607ee0';
     if (level >= 50) return '#ffc107';
     return '#dc3545';
